@@ -1,4 +1,4 @@
-<h1>List contacts</h1>
+<h1>List post of <?php echo $user->name ?></h1>
 <?php if ($this->session->userdata('user')): ?>
 	<?php echo form_open('posts/create',array('class' => "" )); ?>
 <textarea name="post[text]"></textarea>

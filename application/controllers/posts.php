@@ -9,6 +9,7 @@ class posts extends CI_Controller {
 	public function clist()
 	{	
 		$data['title']= "Posts";
+		$data['user'] = $this->session->userdata('user');
 		if ($this->session->userdata('user')) {
 			$data['posts'] = $this->post_model->clist($this->session->userdata('user')->id);
 		}
